@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TipViewControler.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    TipViewControler *vc = [[TipViewControler alloc]init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nvc;
+    
     return YES;
 }
 
